@@ -2,7 +2,7 @@
   "nodes": {
     "mlPkgs": {
       "locked": {
-        "narHash": "sha256-Xr3hSR8G50vF40Bk/XQEmXg3cfBXfixIiygobAyEZi8=",
+        "narHash": "sha256-lvGSNejxUrXsWKoavdB8jWAJOYAO6cqG3P6cHd0eb5s=",
         "path": "/home/me/projects/config/ml-pkgs",
         "type": "path"
       },
@@ -13,17 +13,17 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1637088793,
-        "narHash": "sha256-EZRVBq9tcyyYS83TXk9ZauZS0FsiInpIRkHchA1IJ+4=",
+        "lastModified": 1636944046,
+        "narHash": "sha256-74KLDsiWSBsYXKj/ql9EGbw1TbIJRE7clFkhl30HV/c=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d74b9bab0254fad90acc245fa28e8ee0bbdc905f",
+        "rev": "46251a79f752ae1d46ef733e8e9760b6d3429da4",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d74b9bab0254fad90acc245fa28e8ee0bbdc905f",
+        "rev": "46251a79f752ae1d46ef733e8e9760b6d3429da4",
         "type": "github"
       }
     },
