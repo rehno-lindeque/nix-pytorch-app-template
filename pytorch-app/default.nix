@@ -2,9 +2,11 @@
 , buildPythonApplication
 , python
 , pytorch
+, kornia
 , torchvision
 , pandas
 , setuptools
+, tqdm
 , wandb
 }:
 
@@ -16,22 +18,24 @@ buildPythonApplication {
   src = ./.;
   propagatedBuildInputs = [
     pytorch
+    kornia
     setuptools
     torchvision
+    tqdm
     wandb
   ];
 
   installPhase = ''
-    mkdir -p $out/share $out/bin
-    cp -r src $out/share
+    mkdir -p $out $out/bin
+    cp -r app $out/share
 
-    chmod +x $out/share/src/train/main.py
-    wrapPythonProgramsIn $out/share/src/train "$out/share/src/train $pythonPath"
-    ln -s $out/share/src/train/main.py $out/bin/train
+    chmod +x $out/share/train/train.py
+    wrapPythonProgramsIn $out/share/train "$out/share/train $pythonPath"
+    ln -s $out/share/train/train.py $out/bin/train
 
-    chmod +x $out/share/src/inference/main.py
-    wrapPythonProgramsIn $out/share/src/inference "$out/share/src/inference $pythonPath"
-    ln -s $out/share/src/inference/main.py $out/bin/inference
+    chmod +x $out/share/inference/inference.py
+    wrapPythonProgramsIn $out/share/inference "$out/share/inference $pythonPath"
+    ln -s $out/share/inference/inference.py $out/bin/inference
   '';
 
 }

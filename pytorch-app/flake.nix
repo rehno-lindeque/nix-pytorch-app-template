@@ -5,7 +5,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/46251a79f752ae1d46ef733e8e9760b6d3429da4";
     utils.url = "github:numtide/flake-utils";
-    mlPkgsSrc.url = "github:rehno-lindeque/ml-pkgs";
+    mlPkgs.url = "github:rehno-lindeque/ml-pkgs";
   };
 
   outputs = { self, nixpkgs, utils, mlPkgs, ... }:
@@ -26,13 +26,13 @@
     eachDefaultEnvironment ({ pkgs, system }: {
 
       devShell = import ./shell.nix {
-        inherit pkgs lib;
+        inherit pkgs;
         inherit (self.packages."${system}") pytorchApp;
       };
 
-      packages.pytorchApp = pkgs.callPackage ./. {};
+      packages.pytorchApp = pkgs.pythonPackages.callPackage ./. {};
 
-      defaultPackage = (self.packages."${system}").pytorch-template-offset;
+      defaultPackage = (self.packages."${system}").pytorchApp;
 
     }) // {
 
