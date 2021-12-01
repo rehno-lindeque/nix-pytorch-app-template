@@ -10,6 +10,7 @@ let
       with pythonPkgs;
       [
         flake8
+        pip
       ] ++ app.propagatedBuildInputs
   );
 in
@@ -33,6 +34,13 @@ pkgs.mkShell {
         echo "PyTorch development environment"
         echo "-------------------------------"
         printf "${nc}"
+        echo
+        echo "USAGE:"
+        echo "  pip install .         # get started developing"
+        echo "  python app/train      # run training for local development"
+        echo "  python app/inference  # run inference for local development"
+        echo
+        echo "To do a full training run, build the nix model"
         echo
 
         alias pip="PIP_PREFIX='$(pwd)/_build/pip_packages' TMPDIR='/tmp' \pip"
