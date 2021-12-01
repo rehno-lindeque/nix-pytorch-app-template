@@ -1,3 +1,9 @@
+# pip
+/_build/
+
+# nix
+/result
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
