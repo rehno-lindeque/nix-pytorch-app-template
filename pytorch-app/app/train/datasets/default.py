@@ -22,13 +22,13 @@ class Dataset(torch.utils.data.Dataset[Sample]):
         self.image_folder = Dataset.ImageFolder(**kwargs)
 
     @property
-    def class_to_idx(self):
-        return self.image_folder.class_to_idx
+    def class_to_idx(self) -> Mapping[str, int]:
+        return self.image_folder.class_to_idx  # type: ignore
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.image_folder)
 
-    def __getitem__(self, index):
+    def __getitem__(self, index) -> Sample:
         image, label = self.image_folder[index]
         image_path, class_index = self.image_folder.imgs[index]
         return Sample(
