@@ -1,9 +1,9 @@
+from app.train.sample import Sample
+from typing import Mapping
+import app.train.sample as sample
 import os
 import torch.utils.data
 import torchvision.datasets
-from app.train.sample import Sample
-import app.train.sample as sample
-from typing import Mapping
 
 
 class Dataset(torch.utils.data.Dataset[Sample]):

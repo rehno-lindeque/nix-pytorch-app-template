@@ -1,7 +1,7 @@
-import torchvision.transforms.functional
-import wandb
 from app.train.sample import AugmentedSample
 from typing import Mapping, Any
+import torchvision.transforms.functional
+import wandb
 
 
 class Visualizer:

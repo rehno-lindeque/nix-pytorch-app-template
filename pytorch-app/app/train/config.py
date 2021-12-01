@@ -1,5 +1,5 @@
-from dataclasses import dataclass, field
 from app.train.common import DirPath, Epoch
+from dataclasses import dataclass, field
 from typing import Dict, Any, Optional, Mapping
 
 

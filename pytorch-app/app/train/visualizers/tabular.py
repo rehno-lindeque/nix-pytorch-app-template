@@ -1,9 +1,9 @@
-import wandb
-from app.train.sample import AugmentedSample
 from app.train import sample
+from app.train.sample import AugmentedSample
 from app.train.visualizers import simple
-import torch
 from typing import Mapping
+import torch
+import wandb
 
 
 class Visualizer:

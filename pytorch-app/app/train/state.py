@@ -1,11 +1,11 @@
 from app.train.common import Epoch, DirPath
 from dataclasses import dataclass
+from typing import Any, Dict
 import dataclasses
 import glob
 import json
 import os
 import torch
-from typing import Any, Dict
 
 # Any pytorch state_dict
 CheckpointDict = Dict[str, Any]

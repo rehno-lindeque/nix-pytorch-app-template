@@ -1,10 +1,10 @@
-from functools import reduce
 from dataclasses import dataclass, field
 from enum import Enum
-import app.train.sample as sample
-import torch
+from functools import reduce
 from torch import nn
 from typing import Optional, Mapping, AbstractSet, Union, Tuple, TypeVar, Sequence
+import app.train.sample as sample
+import torch
 
 T = TypeVar("T")
 
