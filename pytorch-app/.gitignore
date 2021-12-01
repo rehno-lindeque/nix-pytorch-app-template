@@ -22,4 +22,5 @@ ipython_config.py
 dmypy.json
 
 # outputs
-wandb/
+/wandb/
+/experiments/

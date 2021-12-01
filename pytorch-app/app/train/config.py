@@ -119,7 +119,7 @@ class Config:
     logger: LoggerConfig = field(default_factory=LoggerConfig)
 
     # Add paths to any additional source models below
-    # pretrained_model: Optional[FilePath] = None
+    # backbone_model: Optional[FilePath] = None
     # teacher_model: Optional[FilePath] = None
 
     def __post_init__(self):
