@@ -1,4 +1,4 @@
-from common import Epoch, DirPath
+from app.train.common import Epoch, DirPath
 from dataclasses import dataclass
 import dataclasses
 import glob

@@ -1,13 +1,13 @@
 import wandb
-from sample import AugmentedSample
-import sample
+from app.train.sample import AugmentedSample
+from app.train import sample
+from app.train.visualizers import simple
 import torch
 from typing import Mapping
-from . import simple
 
 
 class Visualizer:
-    def __init__(self, class_to_idx: Dict[str, int], **kwargs):
+    def __init__(self, class_to_idx: Mapping[str, int], **kwargs):
         self.simple_visualizer = simple.Visualizer(class_to_idx=class_to_idx, **kwargs)
         self.classes = [
             k for k, _ in sorted(class_to_idx.items(), key=lambda item: item[1])

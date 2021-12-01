@@ -1,10 +1,9 @@
 import os
-from sample import Sample
-import sample
 import torch.utils.data
 import torchvision.datasets
-
-# from typing import Tuple, Dict, List
+from app.train.sample import Sample
+import app.train.sample as sample
+from typing import Mapping
 
 
 class Dataset(torch.utils.data.Dataset[Sample]):

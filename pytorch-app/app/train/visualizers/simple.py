@@ -1,6 +1,6 @@
 import torchvision.transforms.functional
 import wandb
-from sample import AugmentedSample
+from app.train.sample import AugmentedSample
 from typing import Mapping, Any
 
 

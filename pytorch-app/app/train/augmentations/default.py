@@ -1,7 +1,7 @@
 import kornia
-from sample import Sample, AugmentedSample
-import sample
 from torch import nn
+from app.train.sample import Sample, AugmentedSample
+import app.train.sample as sample
 
 
 class Augmentation(nn.Module):

@@ -1,7 +1,7 @@
 from functools import reduce
 from dataclasses import dataclass, field
 from enum import Enum
-import sample
+import app.train.sample as sample
 import torch
 from torch import nn
 from typing import Optional, Mapping, AbstractSet, Union, Tuple, TypeVar, Sequence

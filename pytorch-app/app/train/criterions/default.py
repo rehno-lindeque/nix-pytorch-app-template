@@ -1,4 +1,4 @@
-import sample
+import app.train.sample as sample
 import torch
 from torch import nn
 from dataclasses import dataclass, field

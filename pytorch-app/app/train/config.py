@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
+from app.train.common import DirPath, Epoch
 from typing import Dict, Any, Optional, Mapping
-from common import DirPath, Epoch
 
 
 Kwargs = Dict[str, Any]
